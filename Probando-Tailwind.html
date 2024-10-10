@@ -1,17 +1,282 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="tailwind.css">
+    <link rel="stylesheet" href="tailwind.css" />
     <title>Probando tailwind</title>
   </head>
-  <body>
-    <h1 class="text-3xl font-bold underline text-purple-600">
-      Hello World!
-    </h1>
+  <body class="bg-slate-200">
+    <header class="bg-slate-300 px-6 shadow">
+      <div class="flex justify-between h-16 items-center max-w-6xl mx-auto">
+        <button
+          class="text-green-500 hover:text-white hover:bg-gray-400 rounded p-1 -ml-1 transition-all focus:ring-1 focus:ring-green-500"
+        >
+          <svg
+            class="h-7 w-7"
+            data-slot="icon"
+            fill="nove"
+            stroke-width="1.5"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            ></path>
+          </svg>
+        </button>
 
+        <div class="flex -mr-4 items-center">
+          <a class="text-green-600 hover:rotate-12 duration-150" href="#"
+            ><svg
+              class="h-9 w-9"
+              data-slot="icon"
+              fill="none"
+              stroke-width="1.5"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"
+              ></path>
+            </svg>
+          </a>
+          <div class="space-x-7 ml-7 hidden md:flex">
+            <a class="font-semibold px-3 py-2 text-green-900" href="#">Home</a>
+            <a
+              class="text-green-600 font-semibold px-3 py-2 hover:text-green-700 transition-colors"
+              href="#"
+              >About</a
+            >
+            <a
+              class="text-green-600 font-semibold px-3 py-2 hover:text-green-700 transition-colors"
+              href="#"
+              >Blog</a
+            >
+            <a
+              class="text-green-600 font-semibold px-3 py-2 hover:text-green-700 transition-colors"
+              href="#"
+              >Contact</a
+            >
+          </div>
+        </div>
 
+        <div class="flex">
+          <button
+            class="rounded-full p-1 transition-colors text-green-500 hover:text-green-800 focus:ring-1 focus:ring-green-500 focus:ring-offset-1"
+          >
+            <svg
+              class="h-6 w-6"
+              data-slot="icon"
+              fill="none"
+              stroke-width="1.5"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+              ></path>
+            </svg>
+          </button>
+          <button
+            class="text-green-500 hover:bg-gray-400 ml-3 rounded-full focus:ring-2 focus:ring-green-500 focus:ring-offset-1"
+          >
+            <img
+              class="h-9 w-9 rounded-full"
+              src="https://ui-avatars.com/api/?name=Carlos+Linares"
+              alt="Carlos Linares"
+            />
+          </button>
+        </div>
+      </div>
+      <!-- Link -->
+      <div class="hidden space-y-1 pb-3 pt-2 border-t md:hidden">
+        <a href="#" class="block px-3 py-2 rounded-xl text-white bg-gray-400">
+          Home</a
+        >
+        <a
+          href="#"
+          class="block px-3 py-2 rounded-xl transition-colors text-green-700 hover:text-white hover:bg-gray-400"
+        >
+          About</a
+        >
+        <a
+          href="#"
+          class="block px-3 py-2 rounded-xl transition-colors text-green-700 hover:text-white hover:bg-gray-400"
+        >
+          Blog</a
+        >
+        <a
+          href="#"
+          class="block px-3 py-2 rounded-xl transition-colors text-green-700 hover:text-white hover:bg-gray-400"
+        >
+          Contact</a
+        >
+      </div>
+    </header>
+    <!--main-->
+    <main class="p-4">
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+  <article class="bg-white shadow rounded overflow-hidden ">
+    <div class="h-50">
+      <img class="rounded h-full w-full object-cover object-center" src="public/img/article-1.jpg" alt="Desarrollo de una API con Laravel siguiendo la especificacion
+      JSON:API" /></div>
+    <div class="space-y-3 p-5">
+      <h3 class="text-sm font-bold text-green-600">Desk and Office</h3>
+      <h2 class="text-xl font-semibold text-slate-900 leading-snug">
+        Boost your conversion rate
+      </h2>
+      <p class="text-slate-600">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+        porro deleniti asperiores fugiat. Cupiditate nulla laboriosam, aut
+        voluptatibus dolorum labore? Delectus velit, accusamus enim
+        obcaecati nesciunt commodi laborum possimus quaerat?
+      </p>
+    </div>
+    <div class="flex space-x-2 p-5">
+      <img class="rounded-full h-10 w-10" src="https://ui-avatars.com/api/?name=Jorge Vargas" alt="Jorge Vargas">
+      <div class="flex flex-col justify-center" >
+        <span class="text-sm font-semibold text-green-600 leading-3">Jorge Vargas</span>
+        <span class="text-slate-400 text-sm">Mar 22, 2023</span>
+      </div>
+    </div>
+  </article>
+  <article class="bg-white shadow rounded overflow-hidden ">
+    <div class="h-50">
+      <img class="rounded h-full w-full object-cover object-center" src="public/img/article-2.jpg" alt="Desarrollo de una API con Laravel siguiendo la especificacion
+      JSON:API" /></div>
+    <div class="space-y-3 p-5">
+      <h3 class="text-sm font-bold text-green-600">Self-Improvement</h3>
+      <h2 class="text-xl font-semibold text-slate-900 leading-snug">
+        How to use search engine optimization to drive sales
+      </h2>
+      <p class="text-slate-600">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+        porro deleniti asperiores fugiat. Cupiditate nulla laboriosam, aut
+        voluptatibus dolorum labore? Delectus velit, accusamus enim
+        obcaecati nesciunt commodi laborum possimus quaerat?
+      </p>
+    </div>
+    <div class="flex space-x-2 p-5">
+      <img class="rounded-full h-10 w-10" src="https://ui-avatars.com/api/?name=Lorenzo Solano" alt="Lorenzo Solano">
+      <div class="flex flex-col justify-center" >
+        <span class="text-sm font-semibold text-green-600 leading-3">Lorenzo Solano</span>
+        <span class="text-slate-400 text-sm">May 11, 2023</span>
+      </div>
+    </div>
+  </article>
+  <article class="bg-white shadow rounded overflow-hidden ">
+    <div class="h-50">
+      <img class="rounded h-full w-full object-cover object-center" src="public/img/article-3.jpg" alt="Desarrollo de una API con Laravel siguiendo la especificacion
+      JSON:API" /></div>
+    <div class="space-y-3 p-5">
+      <h3 class="text-sm font-bold text-green-600">Travel</h3>
+      <h2 class="text-xl font-semibold text-slate-900 leading-snug">
+        Daily commute essentials
+      </h2>
+      <p class="text-slate-600">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+        porro deleniti asperiores fugiat. Cupiditate nulla laboriosam, aut
+        voluptatibus dolorum labore? Delectus velit, accusamus enim
+        obcaecati nesciunt commodi laborum possimus quaerat?
+      </p>
+    </div>
+    <div class="flex space-x-2 p-5">
+      <img class="rounded-full h-10 w-10" src="https://ui-avatars.com/api/?name=Laura Crucel" alt="Laura Crucel">
+      <div class="flex flex-col justify-center" >
+        <span class="text-sm font-semibold text-green-600 leading-3">Laura Crucel</span>
+        <span class="text-slate-400 text-sm">Jun 09, 2023</span>
+      </div>
+    </div>
+  </article>
+  <article class="bg-white shadow rounded overflow-hidden ">
+    <div class="h-50">
+      <img class="rounded h-full w-full object-cover object-center" src="public/img/article-4.jpg" alt="Desarrollo de una API con Laravel siguiendo la especificacion
+      JSON:API" /></div>
+    <div class="space-y-3 p-5">
+      <h3 class="text-sm font-bold text-green-600">Laravel</h3>
+      <h2 class="text-xl font-semibold text-slate-900 leading-snug">
+        Desarrollo de una API con Laravel siguiendo la especificacion
+        JSON:API
+      </h2>
+      <p class="text-slate-600">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+        porro deleniti asperiores fugiat. Cupiditate nulla laboriosam, aut
+        voluptatibus dolorum labore? Delectus velit, accusamus enim
+        obcaecati nesciunt commodi laborum possimus quaerat?
+      </p>
+    </div>
+    <div class="flex space-x-2 p-5">
+      <img class="rounded-full h-10 w-10" src="https://ui-avatars.com/api/?name=Jose+Mata" alt="Jose Mata">
+      <div class="flex flex-col justify-center" >
+        <span class="text-sm font-semibold text-green-600 leading-3">Jose Mata</span>
+        <span class="text-slate-400 text-sm">Jun 29, 2023</span>
+      </div>
+    </div>
+  </article>
+  <article class="bg-white shadow rounded overflow-hidden ">
+    <div class="h-50">
+      <img class="rounded h-full w-full object-cover object-center" src="public/img/article-5.jpg" alt="Desarrollo de una API con Laravel siguiendo la especificacion
+      JSON:API" /></div>
+    <div class="space-y-3 p-5">
+      <h3 class="text-sm font-bold text-green-600">Daily</h3>
+      <h2 class="text-xl font-semibold text-slate-900 leading-snug">
+        How to become a code master
+      </h2>
+      <p class="text-slate-600">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+        porro deleniti asperiores fugiat. Cupiditate nulla laboriosam, aut
+        voluptatibus dolorum labore? Delectus velit, accusamus enim
+        obcaecati nesciunt commodi laborum possimus quaerat?
+      </p>
+    </div>
+    <div class="flex space-x-2 p-5">
+      <img class="rounded-full h-10 w-10" src="https://ui-avatars.com/api/?name=Andres Pineda" alt="Andres Pineda">
+      <div class="flex flex-col justify-center" >
+        <span class="text-sm font-semibold text-green-600 leading-3">Andres Pineda</span>
+        <span class="text-slate-400 text-sm">Jul 15, 2023</span>
+      </div>
+    </div>
+  </article>
+  <article class="bg-white shadow rounded overflow-hidden ">
+    <div class="h-50">
+      <img class="rounded h-full w-full object-cover object-center" src="public/img/article-6.jpg" alt="Desarrollo de una API con Laravel siguiendo la especificacion
+      JSON:API" /></div>
+    <div class="space-y-3 p-5">
+      <h3 class="text-sm font-bold text-green-600">Big Advice</h3>
+      <h2 class="text-xl font-semibold text-slate-900 leading-snug">
+        Do you want to stop being dead in programming?
+      </h2>
+      <p class="text-slate-600">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+        porro deleniti asperiores fugiat. Cupiditate nulla laboriosam, aut
+        voluptatibus dolorum labore? Delectus velit, accusamus enim
+        obcaecati nesciunt commodi laborum possimus quaerat?
+      </p>
+    </div>
+    <div class="flex space-x-2 p-5">
+      <img class="rounded-full h-10 w-10" src="https://ui-avatars.com/api/?name=Eduardo Burgos" alt="Eduardo Burgos">
+      <div class="flex flex-col justify-center" >
+        <span class="text-sm font-semibold text-green-600 leading-3">Eduardo Burgos</span>
+        <span class="text-slate-400 text-sm">Ago 11, 2023</span>
+      </div>
+    </div>
+  </article>
+
+</div>
+    </main>
   </body>
 </html>
